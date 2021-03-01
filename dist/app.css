@@ -8,9 +8,27 @@ ul.horizontal-nav {
   list-style: none;
   display: flex;
 }
+
+.active {
+  color: #3368D6 !important;
+  position: relative;
+}
+
+.active::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 3px;
+  background-color: #3368D6;
+  left: 0;
+  right: 0;
+  bottom: -18px;
+}
+
 .logo-container {
   display: inline-block;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif !important;
+  letter-spacing: -2px !important;
 }
 .logo-container span:first-child {
   color: #4285F4;
@@ -34,7 +52,12 @@ ul.horizontal-nav {
 header {
   height: 100px;
   border-bottom: 1px solid #C6C7C8;
-  display: fixed;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: white;
+  padding: 6px 20px;
 }
 header .header-top {
   height: 50%;
@@ -42,27 +65,43 @@ header .header-top {
   justify-content: space-between;
   align-items: center;
 }
+header .header-top h1 {
+  font-size: 22px;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  color: #5f6368;
+}
 header .header-top .right-box {
   display: flex;
+  align-items: center;
+}
+header .header-top .right-box .menu img {
+  vertical-align: middle;
 }
 header .header-top .right-box .user {
   border-radius: 50%;
   background-color: #AC48BC;
   height: 40px;
   width: 40px;
+  margin-left: 20px;
 }
 header .header-bottom {
+  font-family: "Montserrat", sans-serif;
   height: 50%;
   display: flex;
   align-items: center;
 }
 header .header-bottom ul li {
   margin-right: 50px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #5f6368;
 }
 
 main {
   width: 950px;
   margin: 0 auto;
+  padding-top: 100px;
 }
 main .section {
   padding-top: 100px;
@@ -90,6 +129,22 @@ main .section p {
 main .section p a {
   text-decoration: none;
   color: #3368D6;
+}
+main .section ul {
+  margin-left: 10px;
+  padding-left: 10px;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #5F5F5F;
+  list-style-type: decimal;
+}
+main .section ul li {
+  padding-top: 30px;
+  padding-left: 20px;
+}
+main .section ul li ul {
+  list-style-type: lower-alpha;
 }
 
 .footer-container {

@@ -46,7 +46,7 @@
         ]
         ];
 
-        $headerNav = ["Introduzione", "Norme sulla privacy", "Termini di servizio", "Tecnologie", "Domande frequenti"];
+        $headerNav = [["Introduzione", ""], ["Norme sulla privacy", ""], ["Termini di servizio", ""], ["Tecnologie", ""], ["Domande frequenti", "active"]];
 
         $footerGoogleNav = ["Google", "Tutto su Google", "Privacy", "Termini"];
 
@@ -96,9 +96,15 @@
 
             <nav class="header-bottom">
                 <ul class="horizontal-nav">
-                    <?php foreach($headerNav as $element) {?>
-                        <li><?php echo $element ?></li>
-                    <?php }; ?>
+                    <?php foreach($headerNav as $element) {
+                        // check if the element is active and conditionally return a li
+                        if($element[1] === "active") {
+                            echo "<li class=\"active\">{$element[0]}</li>";
+                        } else {
+                            echo "<li>{$element[0]}</li>";
+                        }
+                        
+                    }; ?>
                 </ul>
             </nav>
         </header>
