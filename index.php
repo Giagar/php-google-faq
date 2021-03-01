@@ -42,7 +42,7 @@
 
         [
             "question" => "Quando faccio clic sui risultati della Ricerca Google, le mie chiavi di ricerca vengono inviate ai siti web?",
-            "answer" => "In alcuni casi sì. Quando fai clic su un risultato della Ricerca Google, il tuo browser web potrebbe reindirizzare alla pagina web di destinazione anche l'indirizzo Internet, o URL, della pagina dei risultati di ricerca sotto forma di <a href=\"#\">URL referrer</a>. Talvolta, l'URL della pagina dei risultati di ricerca potrebbe contenere la query di ricerca che hai inserito. Se utilizzi la ricerca SSL (la funzione di ricerca criptata di Google), nella maggior parte dei casi i termini di ricerca non vengono inviati come parte dell'URL negli URL referrer. Questo comportamento può fare eccezione, ad esempio se utilizzi alcuni browser meno diffusi. Ulteriori informazioni sulla ricerca SSL sono disponibili qui. Le query di ricerca o le informazioni contenute nell'URL referrer potrebbero essere disponibili mediante Google Analytics o un'API (Application Programming Interface). Inoltre, gli inserzionisti potrebbero ricevere informazioni relative all' esatte parole chiave che hanno determinato il clic su un annuncio."
+            "answer" => "<p>In alcuni casi sì. Quando fai clic su un risultato della Ricerca Google, il tuo browser web potrebbe reindirizzare alla pagina web di destinazione anche l'indirizzo Internet, o URL, della pagina dei risultati di ricerca sotto forma di <a href=\"#\">URL referrer</a>. Talvolta, l'URL della pagina dei risultati di ricerca potrebbe contenere la query di ricerca che hai inserito. Se utilizzi la ricerca SSL (la funzione di ricerca criptata di Google), nella maggior parte dei casi i termini di ricerca non vengono inviati come parte dell'URL negli URL referrer. Questo comportamento può fare eccezione, ad esempio se utilizzi alcuni browser meno diffusi. Ulteriori informazioni sulla ricerca SSL sono disponibili qui. Le query di ricerca o le informazioni contenute nell'URL referrer potrebbero essere disponibili mediante Google Analytics o un'API (Application Programming Interface). Inoltre, gli inserzionisti potrebbero ricevere informazioni relative all' esatte parole chiave che hanno determinato il clic su un annuncio.</p>"
         ]
         ];
 
@@ -63,6 +63,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Domande frequenti - Privacy e termini - Google</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css'/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./dist/app.css">
 </head>
 
@@ -72,16 +75,27 @@
         <header>
             <div class="header-top">
 
-                <h1><span>Google</span> Privacy e termini</h1>
+                <h1>
+                    <div class="logo-container">
+                        <span>G</span>
+                        <span>o</span>
+                        <span>o</span>
+                        <span>g</span>
+                        <span>l</span>
+                        <span>e</span>
+                    </div>
+                     Privacy e termini</h1>
                 
                 <div class="right-box">
-                    <div class="menu">#</div>
-                    <div class="user">User</div>
+                    <div class="menu">
+                        <img src="./img/menu.png" alt="menu">
+                    </div>
+                    <div class="user"></div>
                 </div>
             </div>
 
             <nav class="header-bottom">
-                <ul>
+                <ul class="horizontal-nav">
                     <?php foreach($headerNav as $element) {?>
                         <li><?php echo $element ?></li>
                     <?php }; ?>
@@ -92,34 +106,36 @@
         <main>
             <?php foreach($data as $section) { ?>
 
-                <div class="section">
+                <section class="section">
                     <h2 class="question"> <?php echo $section["question"] ?> </h2>
                     <div class="answer"> <?php echo $section["answer"] ?> </div>
-                </div>
+                </section>
             
             <?php }; ?> 
 
             
         
         </main>
-
-        <footer>
-                <ul class="footer-left-box">
-                    <?php foreach($footerGoogleNav as $item) {?>
-                        <li> <?php echo $item ?> </li>
-                    <?php }; ?>
-                </ul>
-
-                <div class="footer-right-box">
-                    <select name="language" id="language">
-                        <?php foreach($footerLang as $lang) {
-                            echo "<option value=\"{$lang}\">$lang</option>";
-                        }; ?>
-                    </select>
-                </div>
-
-
-        </footer>
+        
+        <div class="footer-container">
+            <footer>
+                    <ul class="footer-left-box horizontal-nav">
+                        <?php foreach($footerGoogleNav as $item) {?>
+                            <li> <?php echo $item ?> </li>
+                        <?php }; ?>
+                    </ul>
+    
+                    <div class="footer-right-box">
+                        <select name="language" id="language">
+                            <?php foreach($footerLang as $lang) {
+                                echo "<option value=\"{$lang}\">$lang</option>";
+                            }; ?>
+                        </select>
+                    </div>
+    
+    
+            </footer>
+        </div>
 
 
     </div>

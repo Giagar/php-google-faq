@@ -1,0 +1,135 @@
+// font-family: 'Montserrat', sans-serif;
+// font-family: 'Roboto', sans-serif;
+
+// COMMONS
+* {box-sizing: border-box; margin: 0; padding: 0;}
+
+ul.horizontal-nav {
+    list-style: none;
+    display: flex;
+
+    li {
+
+    }
+}
+
+// _logo
+.logo-container {
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+
+    span:first-child {
+        color: #4285F4;
+    }
+
+    span:nth-child(2) {
+        color: #EA4335;
+    }
+
+    span:nth-child(3) {
+        color: #FBFC06;
+    }
+
+    span:nth-child(4) {
+        color: #4285F4;
+    }
+
+    span:nth-child(5) {
+        color: #35A853;
+    }
+
+    span:last-child {
+        color: #EA4335;
+    }
+}
+// _/logo
+
+// STYLE
+// header
+header {
+    height: 100px;
+    border-bottom: 1px solid #C6C7C8;
+    display: fixed;
+
+    .header-top {
+        height: 50%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .right-box {
+            display: flex;
+
+            .user {
+                border-radius: 50%;
+                background-color: #AC48BC;
+                height: 40px;
+                width: 40px;
+            }
+        }
+
+    }
+
+    .header-bottom {
+        height: 50%;
+        display: flex;
+        align-items: center;
+
+        ul {
+            li {
+                margin-right: 50px;;
+            }
+        }
+    }
+}
+
+// main
+main {
+    width: 950px;
+    margin: 0 auto;
+
+    .section {
+        padding-top: 100px;
+
+        h2 {
+            color: #3C4043;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            font-size: 24px;
+        }
+
+        h3 {
+            color: #3C4043;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            font-size: 18px;
+            padding-top: 100px;
+        }
+
+        p {
+            font-family: 'Roboto', sans-serif;
+            padding-top: 30px;
+            font-size: 14px;
+            line-height: 24px;
+            color: #5F5F5F;
+
+            a {
+                text-decoration: none;
+                color: #3368D6;
+            }
+        }
+    } 
+}
+
+// footer
+.footer-container {
+    margin-top: 50px;
+
+    footer {
+        width: 950px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+}
