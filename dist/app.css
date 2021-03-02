@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box;
   margin: 0;
@@ -10,7 +11,7 @@ ul.horizontal-nav {
 }
 
 .active {
-  color: #3368D6 !important;
+  color: #3368d6 !important;
   position: relative;
 }
 
@@ -19,7 +20,7 @@ ul.horizontal-nav {
   display: block;
   position: absolute;
   height: 3px;
-  background-color: #3368D6;
+  background-color: #3368d6;
   left: 0;
   right: 0;
   bottom: -18px;
@@ -31,27 +32,27 @@ ul.horizontal-nav {
   letter-spacing: -2px !important;
 }
 .logo-container span:first-child {
-  color: #4285F4;
+  color: #4285f4;
 }
 .logo-container span:nth-child(2) {
-  color: #EA4335;
+  color: #ea4335;
 }
 .logo-container span:nth-child(3) {
-  color: #FBFC06;
+  color: #fbfc06;
 }
 .logo-container span:nth-child(4) {
-  color: #4285F4;
+  color: #4285f4;
 }
 .logo-container span:nth-child(5) {
-  color: #35A853;
+  color: #35a853;
 }
 .logo-container span:last-child {
-  color: #EA4335;
+  color: #ea4335;
 }
 
 header {
   height: 100px;
-  border-bottom: 1px solid #C6C7C8;
+  border-bottom: 1px solid #c6c7c8;
   position: fixed;
   top: 0;
   right: 0;
@@ -80,7 +81,7 @@ header .header-top .right-box .menu img {
 }
 header .header-top .right-box .user {
   border-radius: 50%;
-  background-color: #AC48BC;
+  background-color: #ac48bc;
   height: 40px;
   width: 40px;
   margin-left: 20px;
@@ -107,13 +108,13 @@ main .section {
   padding-top: 100px;
 }
 main .section h2 {
-  color: #3C4043;
+  color: #3c4043;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 24px;
 }
 main .section h3 {
-  color: #3C4043;
+  color: #3c4043;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 18px;
@@ -124,11 +125,11 @@ main .section p {
   padding-top: 30px;
   font-size: 14px;
   line-height: 24px;
-  color: #5F5F5F;
+  color: #5f5f5f;
 }
 main .section p a {
   text-decoration: none;
-  color: #3368D6;
+  color: #3368d6;
 }
 main .section ul {
   margin-left: 10px;
@@ -136,7 +137,7 @@ main .section ul {
   font-family: "Roboto", sans-serif;
   font-size: 14px;
   font-weight: 400;
-  color: #5F5F5F;
+  color: #5f5f5f;
   list-style-type: decimal;
 }
 main .section ul li {
@@ -149,10 +150,34 @@ main .section ul li ul {
 
 .footer-container {
   margin-top: 50px;
+  height: 50px;
+  background-color: #f5f5f5;
+  color: blue;
 }
 .footer-container footer {
   width: 950px;
+  height: 50px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+.footer-container footer .footer-left-box {
+  font-family: "Roboto", sans-serif;
+  font-size: 11px;
+  font-weight: 300;
+  color: #999999;
+}
+.footer-container footer .footer-left-box li::after {
+  content: "•";
+  padding: 0 5px;
+}
+.footer-container footer .footer-left-box li:last-child::after {
+  content: "";
+}
+.footer-container footer .footer-right-box img {
+  vertical-align: middle;
+}
+.footer-container footer .footer-right-box select {
+  width: 190px;
 }
